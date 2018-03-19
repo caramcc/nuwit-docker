@@ -1,3 +1,12 @@
+# Table of Contents
+
+<!-- toc -->
+
+- [Demo 0: Installing](demo-0-installing)
+- [Demo 1: The Basics](demo-1-the-basics)
+
+<!-- tocstop -->
+
 # Demo 0: Installing
 
 ## macOS
@@ -50,3 +59,31 @@ IBM Z          | s390x
 * [Debian](https://docs.docker.com/install/linux/docker-ce/debian/)
 * [CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)
 * [Fedora](https://docs.docker.com/install/linux/docker-ce/fedora/)
+
+
+
+# Demo 1: The Basics
+
+The first demo will cover:
+
+- basic Dockerfile syntax
+
+- building Docker images
+
+- running Docker containers
+
+## Dockerfile
+
+## Docker build
+
+[docs](https://docs.docker.com/engine/reference/commandline/build/)
+
+`docker build --tag nuwit:demo-1 .`
+
+confirm that it worked:
+
+`docker images`
+
+## Docker run
+
+
