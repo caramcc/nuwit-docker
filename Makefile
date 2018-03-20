@@ -4,6 +4,7 @@ ARCH := amd64
 install_mac:
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	brew cask install docker
+	open /Applications/Docker.app
 
 install_ubuntu:
 	sudo apt-get update
