@@ -1,0 +1,46 @@
+demo_app/*.rbc
+demo_app/capybara-*.html
+demo_app/.rspec
+demo_app/log
+demo_app/tmp
+demo_app/db/*.sqlite3
+demo_app/db/*.sqlite3-journal
+demo_app/public/system
+demo_app/coverage/
+demo_app/spec/tmp
+demo_app/*.orig
+demo_app/rerun.txt
+demo_app/pickle-email-*.html
+
+demo_app/config/initializers/secret_token.rb
+
+# Only include if you have production secrets in this file, which is no longer a Rails default
+# config/secrets.yml
+
+# dotenv
+# TODO Comment out this rule if environment variables can be committed
+demo_app/.env
+
+## Environment normalization:
+demo_app/.bundle
+demo_app/vendor/bundle
+
+# these should all be checked in to normalize the environment:
+# Gemfile.lock, .ruby-version, .ruby-gemset
+
+# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
+demo_app/.rvmrc
+
+# if using bower-rails ignore default bower_components path bower.json files
+demo_app/vendor/assets/bower_components
+demo_app/*.bowerrc
+demo_app/bower.json
+
+# Ignore pow environment settings
+demo_app/.powenv
+
+# Ignore Byebug command history file.
+demo_app/.byebug_history
+
+# Ignore node_modules
+demo_app/node_modules/

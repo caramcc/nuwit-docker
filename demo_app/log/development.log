@@ -1,0 +1,32 @@
+Started GET "/robot_proof/certify" for 172.17.0.1 at 2018-03-20 18:48:14 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RobotProofController#certify as HTML
+  Rendering robot_proof/certify.html.erb within layouts/application
+  Rendered robot_proof/certify.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 477ms (Views: 53.9ms)
+
+
+Started GET "/robot_proof/certify" for 172.17.0.1 at 2018-03-20 18:48:41 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RobotProofController#certify as HTML
+  Rendering robot_proof/certify.html.erb within layouts/application
+  Rendered robot_proof/certify.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 33ms (Views: 23.3ms)
+
+
+Started GET "/robot_proof/certify" for 172.17.0.1 at 2018-03-20 18:48:57 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RobotProofController#certify as HTML
+  Rendering robot_proof/certify.html.erb within layouts/application
+  Rendered robot_proof/certify.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 22.6ms)
+
+
+Started GET "/robot_proof/certify" for 172.17.0.1 at 2018-03-20 18:49:16 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RobotProofController#certify as HTML
+  Rendering robot_proof/certify.html.erb within layouts/application
+  Rendered robot_proof/certify.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 36ms (Views: 26.8ms)
+
+
