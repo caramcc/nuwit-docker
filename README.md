@@ -4,6 +4,7 @@
 
 - [Demo 0: Installing](demo-0-installing)
 - [Demo 1: The Basics](demo-1-the-basics)
+- [Demo 2: Serve an App](demo-2-serve-an-app)
 
 <!-- tocstop -->
 
@@ -122,6 +123,9 @@ You should see output similar to the following:
                 ||----w |
                 ||     ||
 ```
+
+
+# Demo 2: Serve an App
 
 
 
