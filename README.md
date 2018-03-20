@@ -127,5 +127,84 @@ You should see output similar to the following:
 
 # Demo 2: Serve an App
 
+## Precursor: The Rails App, a crash-course
+
+I've put together an extremely bare-bones Rails app in the `demo_app/` directory that we'll be using for this section.
+
+Note: A lot of this Rails app is boilerplate, and we're skipping over the details in this talk. If you're interested in learning about Rails, I personally recomment [Rails Tutorial](https://www.railstutorial.org/book/beginning).
+
+### Files We Care About
+
+#### View files
+
+These define the ERB-interpolated HTML that you'll see when you navigate to a page.
+
+The ones we care about live in:
+`demo_app/app/views/robot_proof/*`
+
+#### Controllers
+
+Controllers are the glue between The Business Logic (for our purposes: not pictured) and the Views. 
+
+`demo_app/app/controllers/robot_proof_controller.rb` 
+
+#### Routes
+
+We're also interested in the Routes file, which defines which views correspond to which URLs.
+
+In a Rails app, that lives in a routes file:
+
+`demo_app/config/routes.rb`
+
+## Build this container!
+
+Notice that the Dockerfile has been updated. We're now building off of a Ruby base container. This is one convience of Docker: the Ruby base container that someone else wrote already sets up a container so we can drop in a Ruby app and run it without worrying about installing a Ruby runtime or other various libraries that we need.
+
+The build command should look familiar. This time we're tagging our image with `demo-2`:
+
+`docker build --tag nuwit:demo-2 .`
+
+## Run the new container!
+
+We need a few more flags to get our container running like we expect:
+
+`docker run  -p 3001:3001 -v $(pwd)/demo_app:/opt/nuwit nuwit:demo-2`
 
 
+### Exposing Ports:
+
+The `-p` flag is used to expose ports from our container to our host machine (your local computer).
+
+Specifically, `-p 3001:3001` tells the docker engine to map port 3001 on the host to port 3001 on our container.
+
+#### Why do we care?
+
+This allows us to access our app (running on port 3001 in our container) from our host machine!
+
+#### Check it out!
+
+Navigate to http://localhost:3001/ in your browser!
+
+
+### Mounting volumes:
+
+The `-v` flag is used to mount a volume from your host machine onto your container.
+
+Specifically, `-v $(pwd)/demo_app:/opt/nuwit` tells the docker engine to sync our `demo_app/` directory from our host to the `/opt/nuwit` directory on our container.
+
+#### Why do we care?
+
+This allows us to make changes locally that will immediately get mirrored to our application in our container. That means we don't need to rebuild the container every time we want to make a change to our app!
+
+#### Check it out!
+
+* Navigate to http://localhost:3001/robot_proof/certify in your browser.
+  * Find the layout unappealing. I'm an infrastructure engineer, not a designer!
+  * Find the content amusing and/or patronizing. How do you do, fellow kids?
+
+* Open up this file: `demo_app/app/controllers/robot_proof_controller.rb`
+
+* Change the `name` variable to your name (or my name, or your professor's name, or your cat's name.)
+  * Save the file
+
+* Refresh the page. Look, the text changed!
